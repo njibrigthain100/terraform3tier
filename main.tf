@@ -1,5 +1,24 @@
+##################################Creating the networks components##############################
+module "vpc-module" {
+    source = "./Networking"
+    Environment          = var.Environment
+    Service              = var.Service
+    Owner                = var.Owner
+    Tier                 = var.Tier
+    Build-Method         = var.Build-Method
+    CostCenter           = var.CostCenter
+    Complaince           = var.Complaince
+    cidr_block           = var.cidr_block
+    region_name          = var.region_name
+    private_subnets_cidr = var.private_subnets_cidr
+    public_subnets_cidr  = var.public_subnets_cidr
+    private_az           = var.private_az
+    public_az            = var.public_az
+}
+
+##################################Creating the security group####################################
 module "security-group-module" {
-    source = "./ec2/Security_group"
+    source = "./Compute/ec2/Security_group"
     region_name = var.region_name
     instance-profile = var.instance-profile
     Environment = var.Environment
@@ -18,11 +37,12 @@ module "security-group-module" {
     db-security_group_rules = var.db-security_group_rules
     lb-security_group_rules = var.lb-security_group_rules
     lb-vpc-security_group_rules = var.lb-vpc-security_group_rules
+    depends_on = [ module.vpc-module ]
    
 }
-
+###########################Creating the Instance###################################################
 module "ec2-instances" {
-    source = "./ec2"
+    source = "./Compute/ec2"
     region_name = var.region_name
     instance-profile = var.instance-profile
     Environment = var.Environment
