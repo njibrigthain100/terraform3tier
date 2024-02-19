@@ -1,4 +1,4 @@
-### Creating a 3 tier architecture with terraform
+## Creating a 3 tier architecture with terraform
 
 The following terraform code creates a 3 tier architecture on your environment. The following resources will be built:
 
