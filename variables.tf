@@ -2,60 +2,51 @@
 variable "Environment" {
   type        = string
   description = "The environment to create the resources in"
-  default     = "prod"
 }
 
 variable "Service" {
   type        = string
   description = "The type of service provided to the client"
-  default     = "Network"
 }
 
 variable "Owner" {
   type        = string
   description = "The owner of all the resources to be built"
-  default     = "Customer-Application-a"
 
 }
 
 variable "Tier" {
   type        = string
   description = "The Tier for the resource created"
-  default     = "1"
 }
 
 variable "Build-Method" {
   type        = string
   description = "The method used to create the resource"
-  default     = "Greenfield"
 
 }
 
 variable "CostCenter" {
   type        = string
   description = "The cost center to be applied to the resources"
-  default     = "1.0.0.1"
 
 }
 
-variable "Complaince" {
+variable "Compliance" {
   type        = string
   description = "The compliance status of the resources"
-  default     = "HIPAA"
 
 }
 
 variable "cidr_block" {
   type        = string
   description = "The vpc cidr block to be used"
-  default     = "10.2.0.0/16"
 
 }
 
 variable "region_name" {
   type        = string
   description = "The region for resources creation"
-  default     = "us-east-1"
 
 }
 
@@ -86,63 +77,13 @@ variable "public_az" {
 }
 
 ###########################Security group and instance variables###################
-variable "region_name" {
-  type        = string
-  description = "The region to deploy all the resources"
-}
+
 
 variable "instance-profile" {
   type        = string
   description = "The instance profile to use for resource deployment"
 
 }
-
-variable "Environment" {
-  type        = string
-  description = "The environment to create the resources in"
-
-}
-
-variable "Service" {
-  type        = string
-  description = "The type of service provided to the client"
-
-}
-
-variable "Owner" {
-  type        = string
-  description = "The owner of all the resources to be built"
-
-
-}
-
-variable "Tier" {
-  type        = string
-  description = "The Tier for the resource created"
-
-}
-
-variable "Build-Method" {
-  type        = string
-  description = "The method used to create the resource"
-
-
-}
-
-variable "CostCenter" {
-  type        = string
-  description = "The cost center to be applied to the resources"
-
-
-}
-
-variable "Compliance" {
-  type        = string
-  description = "The compliance status of the resources"
-
-
-}
-
 
 variable "webserver-security_group_rules" {
   description = "All web server security group rules"

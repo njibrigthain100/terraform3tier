@@ -7,7 +7,7 @@ module "vpc-module" {
     Tier                 = var.Tier
     Build-Method         = var.Build-Method
     CostCenter           = var.CostCenter
-    Complaince           = var.Complaince
+    Compliance           = var.Compliance
     cidr_block           = var.cidr_block
     region_name          = var.region_name
     private_subnets_cidr = var.private_subnets_cidr
