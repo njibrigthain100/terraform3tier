@@ -20,4 +20,4 @@ The following terraform code creates a 3 tier architecture on your environment. 
 
 ##Prerequisites for completing the process
 
-* An AWS account (Please refer to [this] (https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html) documentation on how to create an aws account)
+* An AWS account (Please refer to [this](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html) documentation on how to create an aws account)
