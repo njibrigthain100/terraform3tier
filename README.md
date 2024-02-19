@@ -21,3 +21,28 @@ The following terraform code creates a 3 tier architecture on your environment. 
 ##Prerequisites for completing the process
 
 * An AWS account (Please refer to [this](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html) documentation on how to create an aws account)
+* knowledge on aws networking (vpc, subnets etc.). For more information on networking please refer to [this documentation](https://aws.amazon.com/products/networking/)
+* knowledge on aws compute resources (ec2, security groups etc). For more information on aws compute please refer to [this documentation](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html)
+* knowledge on terraform as an IAC (For more information please refer to [this video](https://www.youtube.com/watch?v=7xngnjfIlK4)
+
+##Deploying the resources
+
+|-- Compute
+|   `-- ec2 |       |-- Security_group |       |   |-- main.tf |       |   |-- output.tf |       |   `-- variables.tf
+|       |-- main.tf
+|       |-- output.tf
+|       `-- variables.tf |-- Networking |   |-- main.tf |   |-- output.tf |   `-- variables.tf
+|-- README.md
+|-- backend.tf
+|-- cobsine.sh
+|-- dotnet.sh
+|-- iis.ps1
+|-- image
+|   `-- README |       |-- 1708317171588.png |       `-- 1708317189901.png
+|-- main.tf
+|-- output.tf
+|-- provider.tf
+|-- variable
+|   |-- DevOps.tfvars
+|   |-- QA.tfvars
+|   `-- shiloh.tfvars `-- variables.tf
